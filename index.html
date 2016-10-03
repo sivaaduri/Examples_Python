@@ -1,0 +1,88 @@
+"""<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+		.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:13px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:13px 20px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-yw4l{vertical-align:top}
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+  <table class="tg">
+        <TR>
+         <H3><BR><center>Evigia</center></H3>
+    <tr>
+  <tr>
+        <TR ALIGN="CENTER">
+    <th class="tg-031e">Tag ID</th>
+    <th class="tg-yw4l">GPS Coordinates</th>
+    <th class="tg-yw4l">Time</th>
+  </tr>
+  <tr>
+        <TR ALIGN="CENTER">
+    <td class="tg-yw4l">4</td>
+    <td class="tg-yw4l">45</td>
+    <td class="tg-yw4l">23</td>
+  </tr>
+  <tr>
+        <TR ALIGN="CENTER">
+    <td class="tg-yw4l">32</td>
+    <td class="tg-yw4l">12</td>
+    <td class="tg-yw4l">44</td>
+  </tr>
+  <tr>
+        <TR ALIGN="CENTER">
+    <td class="tg-yw4l">5</td>
+    <td class="tg-yw4l">76</td>
+    <td class="tg-yw4l">88</td>
+  </tr>
+  <tr>
+        <TR ALIGN="CENTER">
+    <td class="tg-yw4l">21</td>
+    <td class="tg-yw4l">33</td>
+    <td class="tg-yw4l">41</td>
+  </tr>
+</table>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+	  var bangalore = {lat: 42.232, lng: -83.7260};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.232, lng: -83.7260},
+		  
+          zoom: 18
+        });
+		var images='blue_MarkerA.png';
+		var marker = new google.maps.Marker({
+          position: {lat: 42.232, lng: -83.7260},
+          map: map,
+		  icon: images,
+		  title: 'Uluru (Ayers Rock)'
+        });
+		var marker1 = new google.maps.Marker({
+          position: {lat: 42.231, lng: -83.7260},
+          map: map,
+		  title: 'Uluru '
+        });
+		map.setMapTypeId('satellite');
+      }
+	  
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFC5IKNxwcYB5k7cm1l8aQqOi6HJiALI&callback=initMap"
+    async defer></script>
+  </body>
+</html>
+"""
